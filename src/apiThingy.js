@@ -16,13 +16,12 @@ async function data(...params) {
     }
   }
   
-  async function getApi() {
-    const input = document.getElementById('city');
-    const units = document.querySelector('input[name="unitRadios"]:checked')
-      .value;
-    const datum = await data(input.value, units);
-    return datum;
-  }
-  
-  export default getApi;
-  
+async function getApi() {
+  const input = document.getElementById('city');
+  const units = document.querySelector('input[name="unitRadios"]:checked')
+    .value;
+  const datum = await data(input.value, units);
+  return datum;
+}
+
+export default getApi;
